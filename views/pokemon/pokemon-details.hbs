@@ -1,0 +1,18 @@
+<h2>{{pokemon.name}}'s Details</h2>
+
+
+<h3>ID: {{pokemon.id}}</h3>
+<h3>Type:
+  {{#each pokemon.types}}
+  <span>{{this.type.name}}</span>
+  {{/each}}
+</h3>
+
+<img src="{{pokemon.sprites.front_shiny}}" alt="{{pokemon.name}} sprite">
+
+<form action="/pokemon/create/{{pokemon.id}}" method="POST">
+  <label for="titleInput">Title</label>
+  <input id="titleInput" type="text" name="title">
+
+  <button>Save</button>
+</form>

@@ -1,0 +1,12 @@
+<h2>The Users Lists</h2>
+
+
+<ul>
+  {{#each allTitles}}
+  <li>
+    <a href="/users/title-details/{{this._id}}">{{this.title}}</a>
+
+    <form action="/users/delete/{{this._id}}" method="POST"><button>X</button></form>
+  </li>
+  {{/each}}
+</ul>
